@@ -5,6 +5,7 @@ import './App.css';
 import CreateGroup from './components/groups/CreateGroup.component';
 import CreateMember from './components/members/CreateMember.component';
 import Expenses from './containers/Expenses.container';
+
 function App() {
   //Goup
   const [groupsData, setGroups] = useState([])
@@ -35,9 +36,7 @@ function App() {
     setNewMemberName(" ")
   }
 
-
   useEffect(() => {
-
     let filteredResult = membersData.filter(member => { return member.name.toLocaleLowerCase().includes(searchInput) })
     setSearchResult(filteredResult)
     setNumberOfMembers(participatedMember.length)
@@ -49,19 +48,12 @@ function App() {
       return result
     }
     )
-  }, [newMemberName, expensesData,
-    newGroupName, participatedMember,
-    setParticipatedMember, searchInput, membersData,
-    groupsData, setGroups,
-    whoIsPaid, setWhoIsPaid,
- 
+  }, [
+     expensesData,
+     participatedMember,
+      searchInput,
+      membersData,
   ])
-
-  //console.log(membersData);
-  //console.log(groupsData);
-  console.log(participatedMember);
-  console.log(expensesData);
-
 
   return (
     <div className="App">

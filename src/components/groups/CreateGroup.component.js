@@ -31,7 +31,7 @@ export default function CreateGroup({
                 <h1>Add group members</h1>
                 <input
                     type="text"
-                    placeholder="Add a group members"
+                    placeholder="find a group members"
                     value={searchInput}
                     onChange={(e) => { setSearchInput(e.target.value) }}
                 />
