@@ -1,17 +1,16 @@
-import React from "react";
-
+import React, { ChangeEvent } from "react";
 
 interface Props {
     newMemberName: string
-    setNewMemberName: (newMemberName: string) => void
-    handlerOnClick: () => void
+    handleOnClick: () => void
     groupIsActive: boolean
+    handleChange:(e:ChangeEvent<HTMLInputElement>)=> void
 }
 export default function CreateMember({
     newMemberName,
-    setNewMemberName,
-    handlerOnClick,
-    groupIsActive
+    handleOnClick,
+    groupIsActive,
+    handleChange
 }: Props) {
     return (
         <div style={{ display: !groupIsActive ? "block" : "none" }}>
@@ -19,12 +18,12 @@ export default function CreateMember({
             <input
                 type="text"
                 value={newMemberName || " "}
-                onChange={(e) => { setNewMemberName(e.target.value) }}
+                onChange={handleChange}
                 placeholder="Enter your name"
             />
             <button
                 disabled={!newMemberName}
-                onClick={handlerOnClick}
+                onClick={handleOnClick}
             >
                 Add
             </button>

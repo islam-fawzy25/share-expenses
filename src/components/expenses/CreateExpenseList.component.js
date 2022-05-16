@@ -1,33 +1,15 @@
 import React from "react";
-import { MembersDataInterface } from "../../interfaces";
-
-interface WhoIsPaid{
-     id: number,
-      name: string 
-}
-interface Props {
-    participatedMember: MembersDataInterface[]
-    expenseValue: number
-    setExpenseValue: (expenseValue: number) => void
-    setWhoIsPaid: ({})=>void
-    groupIsActive: boolean
-    expenseType: string
-    setExpenseType: (expenseType: string) => void
-    sumExpensesValue: number
-    submit: () => void
-}
-
 export default function CreateExpenseList({
     participatedMember,
-    expenseValue, setExpenseValue,
+    expenseValue,
+    setExpenseValue,
     setWhoIsPaid,
     groupIsActive,
     expenseType,
     setExpenseType,
     sumExpensesValue,
     submit
-}: Props
-) {
+}) {
 
     return (
         <div>
@@ -67,9 +49,9 @@ export default function CreateExpenseList({
                 </div>
                 <h2> Expenses history list:</h2>
             </form>
-            <>
+            <h4>
                 Total expenses = {sumExpensesValue}
-            </>
+            </h4>
         </div>
     )
 }

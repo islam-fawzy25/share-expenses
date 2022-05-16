@@ -1,24 +1,30 @@
 import React from "react";
-import { Interface } from "readline";
+
 interface Props {
     joinExpensesWithMember: () => void
     memberExpensesCardVariant: boolean
     setMemberExpensesCardVariant: (memberExpensesCardVariant: boolean) => void
+    joinPaymentsOnMemebrsdebit:()=>void
+    joinPaymentsOnMemebrsCredit:()=>void
 }
-export default function MemberExpensesCardButton({
+export default function MemberCardButton({
     joinExpensesWithMember,
     memberExpensesCardVariant,
     setMemberExpensesCardVariant,
-}: Props
-) {
+    joinPaymentsOnMemebrsdebit,
+    joinPaymentsOnMemebrsCredit
+}:Props) {
     return (
         <>
+            <h1>Members cards</h1>
             <button onClick={() => {
                 joinExpensesWithMember()
+                joinPaymentsOnMemebrsCredit()
+                joinPaymentsOnMemebrsdebit()
                 setMemberExpensesCardVariant(!memberExpensesCardVariant)
             }}
             >
-                Show members expenses
+                Show members blance
             </button>
         </>
     )

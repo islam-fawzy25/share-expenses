@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import { MembersDataInterface } from "../../interfaces";
+import { MembersDataInterface } from "../../utilities/types";
 
 interface Props {
     member: MembersDataInterface
     membersList: MembersDataInterface[]
 }
 
-export default function ListOfMembers(
-    { member, membersList }: Props
-) {
+export default function ListOfMembers( { member, membersList }:Props) {
     const [variant, setVariant] = useState(false)
     return (
         <li>
@@ -16,16 +14,11 @@ export default function ListOfMembers(
             <button
                 disabled={variant}
                 onClick={() => {
-                    membersList.push({
-                        id: member.id, name: member.name,
-                        expenses: [],
-                        debit: 0,
-                        totalPaid: 0
-                    })
+                    membersList.push(member)
                     setVariant(true)
                 }}>
                 Add
             </button>
-        </li>
+        </li >
     )
 }
