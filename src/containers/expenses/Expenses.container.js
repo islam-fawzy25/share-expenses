@@ -162,7 +162,7 @@ export default function ExpensesContainer({
                                     setMemberExpensesCardVariant={setMemberExpensesCardVariant}
                                     debitList={
                                         <MemberPaymentsButton
-                                            title={"debits"}>
+                                            title={"debit payments"}>
                                             <MemberPaymentsList
                                                 debitPayments={member.debitPaymentsList}
                                             />
@@ -170,7 +170,7 @@ export default function ExpensesContainer({
                                     }
                                     creditList={
                                         <MemberPaymentsButton
-                                            title={"credits"}>
+                                            title={"credit payments"}>
                                             <MemberPaymentsList
                                                 creditPayments={member.creditPaymentsList}
                                             />

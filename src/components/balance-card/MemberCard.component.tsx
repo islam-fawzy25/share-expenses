@@ -2,8 +2,8 @@ import React from "react";
 import { MembersDataInterface } from "../../utilities/types";
 interface Props{
     memberData:MembersDataInterface
-     debitList:[]
-     creditList:[]
+     debitList:JSX.Element[]
+     creditList:JSX.Element[]
 }
 export default function MemberCard({
     memberData, debitList,creditList
@@ -14,14 +14,14 @@ export default function MemberCard({
             <p>Debit Expenses  = {memberData.expensesDebit} Kr </p>
             <p>Debit Payments  = {memberData.paymentsDebit} Kr </p>
             <div>{debitList}</div>
-            <p>Total debit = {memberData.debit} Kr </p>
+            <h4>Total debit = {memberData.debit} Kr </h4>
             <hr></hr>
             <p>Credit Expenses  = {memberData.expensesCredit} Kr </p>
             <p>Credit Payments  = {memberData.paymentsCredit} Kr </p>
             <div>{creditList}</div>
-            <p>Total credit = {memberData.credit} Kr </p>
+            <h4>Total credit = {memberData.credit} Kr </h4>
             <hr></hr>
-            <p>Your balance = {memberData.balance} Kr</p>
+            <h3>Your balance = {memberData.balance} Kr</h3>
         </div>
     )
 }

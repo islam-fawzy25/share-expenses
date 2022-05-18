@@ -24,7 +24,7 @@ export default function MemberCardButton({
                 setMemberExpensesCardVariant(!memberExpensesCardVariant)
             }}
             >
-                Show members blance
+                Show members balance
             </button>
         </>
     )

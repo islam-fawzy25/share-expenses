@@ -9,7 +9,7 @@ export default function MemberPaymentsList({ debitPayments, creditPayments }:Pro
         <>
             {debitPayments && debitPayments.map(element => (
                 <p key={element.id}>
-                    <span>{element.amount} Kr.</span>
+                    <span>{element.amount} Kr. </span>
                     <span>To {element.to} </span>
                     <span>on {element.date}</span>
                 </p>
@@ -17,7 +17,7 @@ export default function MemberPaymentsList({ debitPayments, creditPayments }:Pro
             }
             {creditPayments && creditPayments.map(element => (
                 <p key={element.id}>
-                    <span>{element.amount} Kr.</span>
+                    <span>{element.amount} Kr. </span>
                     <span>From {element.from} </span>
                     <span>on {element.date}</span>
                 </p>

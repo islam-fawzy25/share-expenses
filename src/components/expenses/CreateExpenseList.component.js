@@ -10,7 +10,6 @@ export default function CreateExpenseList({
     sumExpensesValue,
     submit
 }) {
-
     return (
         <div>
             <h1>Save your expenses here:</h1>
@@ -32,6 +31,7 @@ export default function CreateExpenseList({
                 />
                 <div>
                     <p>Add who is paid:</p>
+                    {/* should create components for this part below */}
                     {groupIsActive && participatedMember.map(member =>
                         <div key={member.id}>
                             <li>
