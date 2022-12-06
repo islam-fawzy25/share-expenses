@@ -2,7 +2,7 @@
   "name": "share-expenses",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://islam-fawzy25.github.io/share-expenses/",
+  "homepage": "https://islam-fawzy25.github.io/share-expenses",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
